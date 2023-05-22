@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Registration page</title>
+</head>
+<body style="background-image: url(music.jpeg);">
+ <div class="form">
+	<h1 class="textstyle" style="text-align: center; color: aliceblue;">Register</h1>
+	<form class="textstyle" style="color: aliceblue;" name="myform" method = "post" action = "music.html">
+	        <table align="left" border="0" cellpadding="10">
+                <tr>
+                    <td>Username: </td> 
+                    <td><input type = "text" id="id" name="user" required></td>
+			    </tr>
+                <tr>
+                    <td>Password: </td>
+                    <td><input type ="password" id="pwd" name="pass" required></td>
+                </tr>
+                <tr>
+                    <td>E-mail: </td>
+                    <td><input type ="email" id="mail" name="mail" required></td>
+                </tr>
+                <tr>
+                    <td>Mobile No.: </td>
+                    <td><input type ="number" id="mno" name="mno" required></td>
+                </tr>
+                <tr>
+                    <td>Date:</td>
+                    <td><input type="date" required></td>
+                </tr>
+                <tr>
+                    <td><input type = "checkbox" required></td>
+                    <td> I agree to the terms and conditions</td>
+                </tr>
+                <tr>
+                    <td> <input type="submit" value="Register"></td>
+                    <td> <input type="reset" value="clear"></td>
+                </tr>          
+            </table>
+        </form>  
+	</div>
+</body>
+</html>
+
+<script lang="javascript">
+    function validate()
+    {
+        var myin = document.getElementById("pwd");
+        var mymo = document.getElementById("mno");
+        if(myin.value.length <6)
+        {
+            alert("Please enter password of length 6 and above");
+        }
+        if(mymo.value.length!=10)
+        {
+            alert("Kindly enter correct mobile number");
+        }
+    }
+</script>

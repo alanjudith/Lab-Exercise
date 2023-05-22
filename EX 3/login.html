@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>User Login</title>
+</head>
+<body  style="background-image: url(music.jpeg);">
+ <div class="form">
+	<h1 class="textstyle" style="text-align: center;">Login</h1>
+	<form class="textstyle" name="myform" method = "post">
+	        <table align="left" border="0" cellpadding="10">
+                <tr>
+                    <td>Username: </td> 
+                    <td><input type = "text" id="id" name="user"></td>
+			    </tr>
+                <tr>
+                    <td>Password: </td>
+                    <td><input type ="password" id="pwd" name="pass"></td>
+                </tr>
+                <tr>
+                    <td>Date:</td>
+                    <td><input type="date" required></td>
+                </tr>
+                <tr>
+                    <td><input type = "submit" value="Login" onclick="validate()"></td>
+                    
+                    <td> <input type="reset" value="clear"></td>
+                </tr>      
+            </table>
+        </form>  
+        <form class="textstyle" style="text-align: center;" name="myform1" method = "post" action="register.html">
+            
+            <p >you don't have an account already, kindly register!</p>
+            <input type="submit" value="Register">
+        </form>
+	</div>
+</body>
+</html>
+
+<script lang="javascript">
+    function validate()
+    {
+        var flag=1;
+        if((document.myform.id.value=" " )||(document.myform.pwd.value=" "))
+        {
+            flag=0;
+        }
+        if(flag==1)
+        {
+            window.location.href("file:///C:/Users/satya/Desktop/exp%201/books.html");
+        }
+        else{
+            alert("Credentials are empty. Enter your username and password");
+            document.myform.focus();
+        }
+        //add function to check whether correct matching credentials are given
+    }
+</script>
